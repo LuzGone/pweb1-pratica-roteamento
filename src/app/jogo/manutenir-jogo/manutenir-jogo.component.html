@@ -1,1 +1,21 @@
-<p>manutenir-jogo works!</p>
+<mat-card class="card-cadastro">
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="jogoDeManutencao.nome" placeholder="Digite o nome">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="jogoDeManutencao.empresa" placeholder="Digite a empresa">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="jogoDeManutencao.plataforma" placeholder="Digite as plataformas">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <input matInput [(ngModel)]="jogoDeManutencao.imagem" placeholder="Digite o link da imagem do Jogo">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="manter()">{{nomeBotaoManutencao}}</button>
+    </mat-card-actions>
+</mat-card>
+  

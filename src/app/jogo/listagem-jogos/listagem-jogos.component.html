@@ -1,1 +1,17 @@
-<p>listagem-jogos works!</p>
+<div>
+    <mat-icon [matBadge]="jogos.length" matBadgeColor="primary">videogame_asset</mat-icon>
+</div>
+<div fxLayout="row wrap" fxLayout.lt-sm="column">
+    <mat-card class="jogo-card" *ngFor="let jogo of jogos">
+        <mat-card-header>
+          <mat-card-title>{{jogo.nome}}</mat-card-title>
+          <mat-card-subtitle>{{jogo.plataforma}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="jogo.imagem" class="jogo-image">
+        <mat-card-subtitle class="jogo-subtitle">{{jogo.empresa}}</mat-card-subtitle>
+        <mat-card-actions>
+          <button mat-button [routerLink]="['/editarjogo', jogo.nome]">Editar</button>
+          <button mat-button (click)="excluir(jogo)">Excluir</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

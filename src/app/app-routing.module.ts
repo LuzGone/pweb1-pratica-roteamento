@@ -27,7 +27,7 @@ const routes: Routes = [
     component: ManutenirJogoComponent
   },
   {
-    path: 'editarjogo/:id',
+    path: 'editarjogo/:nome',
     component: ManutenirJogoComponent
   }
 
